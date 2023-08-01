@@ -1,22 +1,34 @@
 
-import React from 'react'
-import Feed from './Feed';
+import React from "react";
+import Feed from "./Feed";
+import "@/app/styles/components/activityfeed.css";
+import { data } from "@/app/beebomco";
 
-const ActivityFeed = () => {
+import { Post } from "@/app/inteface";
+import axios from "axios";
+const ActivityFeed = async (params: { username: string }) => {
+  const data = await axios
+    .get(`http://127.0.0.1:8000/${params.username}`)
+    .then(function (response) {
+      return response.data;
+    });
+    const posts = data.media.data
   return (
     <div className="activityfeed">
       <h1>Activity Feed</h1>
       <div className="activity">
-        <Feed
-          profileimage="https://scontent.fbek1-3.fna.fbcdn.net/v/t51.2885-15/336299856_114987438146562_6557615572862936344_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=86c713&_nc_ohc=O7umoiV5kAQAX8KHLnY&_nc_ht=scontent.fbek1-3.fna&edm=AL-3X8kEAAAA&oh=00_AfAyAVtSzuY_r34CuGJ-XXMKAcKnuCMT_eFubW3IoLch-w&oe=64B7FE05"
-          username="ayangarkarthik"
-          message="tagged you in a post"
-          timemessage="18 min ago"
-          media="https://scontent.fbek1-3.fna.fbcdn.net/v/t51.2885-15/336299856_114987438146562_6557615572862936344_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=86c713&_nc_ohc=O7umoiV5kAQAX8KHLnY&_nc_ht=scontent.fbek1-3.fna&edm=AL-3X8kEAAAA&oh=00_AfAyAVtSzuY_r34CuGJ-XXMKAcKnuCMT_eFubW3IoLch-w&oe=64B7FE05"
-        />
+        {posts.map((post: Post) => (
+          <Feed
+            profileimage={data.profile_picture_url}
+            message={post.caption.slice(0, 80) + "..."}
+            timemessage={post.timestamp}
+            permaurl={post.permalink}
+          />
+        ))}
+        <h1><a href={`/${params.username}/posts`}>See All Posts</a></h1>
       </div>
     </div>
   );
-}
+};
 
-export default ActivityFeed
+export default ActivityFeed;

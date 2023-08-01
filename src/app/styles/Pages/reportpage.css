@@ -1,0 +1,10 @@
+#report {
+  width: 252.574px;
+  height: 55.068px;
+  flex-shrink: 0;
+  font-weight: 400;
+  cursor: pointer;
+  background: #3172ea;
+  border-radius: 1.25rem;
+  color: white;
+}

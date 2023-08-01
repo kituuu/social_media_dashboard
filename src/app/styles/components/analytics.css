@@ -1,0 +1,200 @@
+.analytics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10rem;
+}
+
+.analyticcard {
+  background-color: white;
+  border-radius: 1.83863rem;
+  width: 33.70613rem;
+  height: 17.40738rem;
+  flex-shrink: 0;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.analyticcard .left {
+  padding-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 0.938rem;
+  width: 50%;
+}
+
+.analyticcard .left .heading {
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  color: #808183;
+  font-size: 2.03275rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.analyticcard .left .data {
+  margin-bottom: 0;
+  margin-top: 1.2rem;
+  color: #000;
+  font-size: 3.23388rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.circle1 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.6rem;
+  margin-right: 1.25rem;
+  border: 0.825rem solid #55b58f;
+  border-radius: 50%;
+  width: 10.76413rem;
+  height: 10.76413rem;
+  flex-shrink: 0;
+}
+
+.circle2 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.6rem;
+  margin-right: 1.25rem;
+  border: 0.825rem solid #dfaa35;
+  border-radius: 50%;
+  width: 10.76413rem;
+  height: 10.76413rem;
+  flex-shrink: 0;
+}
+
+.circle3 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.6rem;
+  margin-right: 1.25rem;
+  border: 0.825rem solid #d85a41;
+  border-radius: 50%;
+  width: 10.76413rem;
+  height: 10.76413rem;
+  flex-shrink: 0;
+}
+
+.circle.filled {
+  background-color: #666666;
+}
+
+@media screen and (max-width: 550px) {
+  .analytics {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 4rem;
+  }
+  .analyticcard {
+    background-color: white;
+    border-radius: 1.83863rem;
+    width: 90%;
+    /* max-width: 90.7rem; */
+    margin: 2rem 100rem;
+    /* margin: 0rem 4rem; */
+
+    height: 27.40738rem;
+    flex-shrink: 0;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+
+  .analyticcard .left {
+    padding-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 0.938rem;
+    width: 50%;
+  }
+
+  .analyticcard .left .heading {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    color: #808183;
+    font-size: 5.03275rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .analyticcard .left .data {
+    margin-bottom: 0;
+    margin-top: 1.2rem;
+    color: #000;
+    font-size: 7.23388rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .circle1 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.6rem;
+    margin-right: 1.25rem;
+    border: 2rem solid #55b58f;
+    border-radius: 50%;
+    width: 15.76413rem;
+    height: 15.76413rem;
+    flex-shrink: 0;
+  }
+
+  .circle2 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.6rem;
+    margin-right: 1.25rem;
+    border: 2rem solid #dfaa35;
+    border-radius: 50%;
+    width: 15.76413rem;
+    height: 15.76413rem;
+    flex-shrink: 0;
+  }
+
+  .circle3 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.6rem;
+    margin-right: 1.25rem;
+    border: 2rem solid #d85a41;
+    border-radius: 50%;
+    width: 15.76413rem;
+    height: 15.76413rem;
+    flex-shrink: 0;
+  }
+
+  .circle.filled {
+    background-color: #666666;
+  }
+}
+
+@media (max-width:1300px) and (min-width:550px){
+  .analytics {
+    /* margin-right: 2rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  .analyticcard {
+    width: 20vw;
+    min-width: 221px
+  }
+}

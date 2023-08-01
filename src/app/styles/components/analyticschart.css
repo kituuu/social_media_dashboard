@@ -1,0 +1,22 @@
+.analytic_chart {
+  /* font-size: 50rem; */
+  margin: 0rem 10rem;
+  margin-top: 4rem;
+  /* width: 100vw; */
+  border-radius: 1.83863rem;
+  background: white;
+  padding: 5rem;
+}
+
+@media screen and (max-width: 550px) {
+  .analytic_chart {
+    /* font-size: 50rem; */
+    margin: 0rem 4rem;
+    margin-top: 2rem;
+    width: auto;
+    height: 60rem;
+    border-radius: 1.83863rem;
+    background: white;
+    padding: 3rem;
+  }
+}

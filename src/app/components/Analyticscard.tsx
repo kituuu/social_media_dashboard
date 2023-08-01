@@ -1,6 +1,7 @@
-import React from 'react'
+
 
 const Analyticscard = (params:any) => {
+  
   return (
     <div className="analyticcard">
       <div className="left">

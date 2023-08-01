@@ -1,29 +1,41 @@
-import { Analytics, Search } from '@mui/icons-material'
-import React from 'react'
-import Analyticscard from './Analyticscard'
+import { Search } from "@mui/icons-material";
+import React from "react";
+import Analyticscard from "./Analyticscard";
+import axios from "axios";
+// import { data } from "@/app/beebomco";
+import "@/app/styles/components/dashboardTop.css";
+import "@/app/styles/components/analytics.css";
 
-const Dashboardtop = (params:any) => {
+const Dashboardtop = async(params: { username: string }) => {
+  const data = await axios
+    .get(`http://127.0.0.1:8000/${params.username}`)
+    .then(function (response) {
+      return response.data;
+    })
+
   return (
     <div className="dashboardtop">
       <div className="dashandsearch">
         <div className="dash">
           <h1>Dashboard</h1>
-          <p>Hello, {params.name}, Welcome to Buzzboard</p>
+          <p>Hello, {data.name}, Welcome to Buzzboard</p>
         </div>
         <div className="search">
-          <input type="text" placeholder="Search" />
-          <button type="submit">
-            <Search sx={{ fontSize: 40 }} />{" "}
-          </button>
+          <div className="searchinp">
+            <input type="text" placeholder="Search" />
+          </div>
+          <div className="searchbtn">
+            <Search sx={{ fontSize: 40 }} />
+          </div>
         </div>
       </div>
       <div className="analytics">
-        <Analyticscard title="Total Posts" data="100" id='1'/>
-        <Analyticscard title="Following" data="1234" id='2'/>
-        <Analyticscard title="Followers" data="4312" id='3'/>
+        <Analyticscard title="Total Posts" data={data.media_count} id="1" />
+        <Analyticscard title="Following" data={data.follows_count} id="2" />
+        <Analyticscard title="Followers" data={data.followers_count} id="3" />
       </div>
     </div>
   );
-}
+};
 
-export default Dashboardtop
+export default Dashboardtop;

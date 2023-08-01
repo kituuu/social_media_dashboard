@@ -1,0 +1,90 @@
+.rightsidebar {
+  padding-top: 0.625rem;
+  justify-content: center;
+  display: block;
+  background-color: white;
+  width: 45.73613rem;
+  height: 100%;
+  position: sticky;
+  height: 100vh;
+}
+
+.topleft {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info h1 {
+  text-align: center;
+  padding-top: 0.625rem;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.info p {
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.recentfollowers {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.125rem;
+
+  justify-content: center;
+}
+.recentfollowers h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.recentfollows {
+  margin-top: 1.875rem;
+  display: flex;
+  margin-left: 3.125rem;
+
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.recentfollows h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.usercard {
+  background-color: #f5f6fa;
+  border-radius: 1.25rem;
+  margin-right: 1.875rem;
+  padding-left: 1.25rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex: row;
+  margin-bottom: 1.25rem;
+}
+
+.usercard h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.usercard p {
+  font-size: 1.4rem;
+  padding-bottom: 0.625rem;
+}
+.usercard .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.25rem;
+}
